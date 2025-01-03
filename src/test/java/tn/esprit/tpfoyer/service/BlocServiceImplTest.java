@@ -70,9 +70,7 @@ class BlocServiceImplTest {
     }
 
 
-    @Test
-    void retrieveBloc() {
-    }
+
 
     @Test
     void addBloc() {
@@ -96,15 +94,5 @@ class BlocServiceImplTest {
         Assertions.assertEquals("bloc a", result.getNomBloc());
     }
 
-    @Test
-    void removeBloc() {
-    }
 
-    @Test
-    void trouverBlocsSansFoyer() {
-    }
-
-    @Test
-    void trouverBlocsParNomEtCap() {
-    }
 }
