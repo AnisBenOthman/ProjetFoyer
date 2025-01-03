@@ -2,6 +2,7 @@ package tn.esprit.tpfoyer.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jdk.jshell.Snippet;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -12,6 +13,7 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
@@ -32,6 +34,7 @@ public class Bloc {
     @JsonIgnore
     @ToString.Exclude
     Set<Chambre> chambres = new HashSet<Chambre>();
+
 
 }
 
