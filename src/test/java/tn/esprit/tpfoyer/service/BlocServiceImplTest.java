@@ -14,7 +14,6 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
-@SpringBootTest
 @ExtendWith(MockitoExtension.class)
 class BlocServiceImplTest {
     @Mock
