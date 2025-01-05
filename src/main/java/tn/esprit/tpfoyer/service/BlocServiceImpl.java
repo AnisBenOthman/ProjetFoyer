@@ -50,8 +50,11 @@ public class BlocServiceImpl  implements IBlocService {
 
     @Transactional
     public Bloc retrieveBloc(Long blocId) {
+        if (!blocRepository.existsById(blocId)) {
+            throw new IllegalArgumentException("Bloc not found with ID: " + blocId);
+        }
 
-        return blocRepository.findById(blocId).get();
+        return blocRepository.findById(blocId).orElseThrow(() -> new IllegalArgumentException("Bloc not found with ID: " + blocId));
     }
 
 
@@ -65,7 +68,13 @@ public class BlocServiceImpl  implements IBlocService {
     }
 
     public void removeBloc(Long blocId) {
+
+        if(!blocRepository.existsById(blocId)){
+            throw new IllegalArgumentException("Bloc not found with ID: " + blocId);
+
+        }
         blocRepository.deleteById(blocId);
+
     }
 
 
