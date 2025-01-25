@@ -6,7 +6,7 @@ services:
       - ./.env
     environment:
       - MYSQL_DATABASE=db
-      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD #Root password for MySql server
+      - MYSQL_ROOT_PASSWORD= #Root password for MySql server
 
     ports:
       - "3306:3306"
