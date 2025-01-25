@@ -27,7 +27,7 @@ public class Bloc {
     String nomBloc;
     long capaciteBloc;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     Foyer foyer;
 
     @OneToMany(mappedBy = "bloc")
