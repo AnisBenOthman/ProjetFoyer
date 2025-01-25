@@ -13,6 +13,7 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
     restart: unless-stopped
+    command: --innodb_force_recovery=1
   app:
     build: ./
     depends_on:
